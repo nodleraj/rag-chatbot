@@ -1,13 +1,39 @@
 RAG Chatbot Knowledge Base
 
-This chatbot is powered by Retrieval-Augmented Generation (RAG).
-It loads documents, creates embeddings, stores them in a vector database,
-and uses a Large Language Model (LLM) to answer questions based on the content.
+This chatbot is powered by Retrieval-Augmented Generation (RAG), a technique that combines information retrieval with advanced language generation. Instead of relying solely on what the Large Language Model (LLM) has been trained on, the chatbot can dynamically pull knowledge from your own documents to provide accurate, context-aware answers.
 
-Key Concepts:
-- Embeddings: numerical representation of text meaning.
-- Vector Database: stores embeddings for fast similarity search.
-- Retrieval: finds the most relevant documents given a query.
-- LLM: generates natural language answers from retrieved context.
+The system works in the following way:
 
-You can extend this project by adding more documents into the 'data/' folder.
+Document Loading – Text files or other documents placed in the data/ folder are automatically processed.
+
+Embeddings Creation – Each document is converted into embeddings, which are numerical vectors that represent the meaning of the text.
+
+Vector Database Storage – These embeddings are stored in a vector database, enabling fast and efficient similarity searches.
+
+Retrieval – When a user asks a question, the system searches the vector database to find the most relevant chunks of text.
+
+Answer Generation – The retrieved content is passed to the LLM, which generates a natural language response grounded in the source documents.
+
+Key Concepts
+
+Embeddings: A mathematical representation of text that captures its meaning in numerical form, making it possible to compare semantic similarity between pieces of text.
+
+Vector Database: A specialized database designed for storing and searching embeddings quickly and efficiently. This allows the chatbot to retrieve relevant information even from very large document sets.
+
+Retrieval: The process of searching the vector database to find the top-matching documents or text passages that best answer the user’s query.
+
+Large Language Model (LLM): An advanced AI model capable of generating fluent, human-like responses. In this setup, the LLM uses the retrieved text as context, ensuring that answers are accurate and based on your knowledge base.
+
+Extending the Knowledge Base
+
+You can easily expand this chatbot by adding more documents into the data/ folder. The system will automatically:
+
+Read and process the new documents,
+
+Generate embeddings,
+
+Store them in the vector database, and
+
+Make them available for retrieval during conversations.
+
+This means the chatbot can continuously grow smarter and more useful as you provide it with additional sources of knowledge, whether they are articles, manuals, reports, FAQs, or other text-based resources.
