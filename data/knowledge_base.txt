@@ -1,0 +1,13 @@
+RAG Chatbot Knowledge Base
+
+This chatbot is powered by Retrieval-Augmented Generation (RAG).
+It loads documents, creates embeddings, stores them in a vector database,
+and uses a Large Language Model (LLM) to answer questions based on the content.
+
+Key Concepts:
+- Embeddings: numerical representation of text meaning.
+- Vector Database: stores embeddings for fast similarity search.
+- Retrieval: finds the most relevant documents given a query.
+- LLM: generates natural language answers from retrieved context.
+
+You can extend this project by adding more documents into the 'data/' folder.
